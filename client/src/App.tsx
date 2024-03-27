@@ -13,9 +13,8 @@ axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
 function App() {
-  
-
   return (
+    <div className='app'>
     <UserContextProvider>
       <Navbar />
       <Toaster position='bottom-right' toastOptions={{duration: 6000}}/>
@@ -26,6 +25,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </UserContextProvider>
+    </div>
   )
 }
 

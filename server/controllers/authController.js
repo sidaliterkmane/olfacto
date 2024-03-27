@@ -9,7 +9,7 @@ const test = (req, res) => {
 // Register Endpoint
 const registerUser = async (req, res) => {
     try {
-        const {name, email, password} = req.body;
+        const {name, email, password, confirmedPassword} = req.body;
         // Check if name was entered
         if (!name || name.length < 4) {
             return res.json({
@@ -35,6 +35,12 @@ const registerUser = async (req, res) => {
                 error: "Password is required and must be at least 6 characters long and must contain at least one uppercase letter and one number."
             })
         };
+
+        if (password != confirmedPassword) {
+            return res.json({
+                error: "Passwords do not match."
+            })
+        }
 
         // Check email
         const exist = await User.findOne({email})
