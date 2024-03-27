@@ -26,7 +26,7 @@ const Register = () => {
           email: '',
           password: ''
         })
-        toast.success("Registration Successful. Welcome to Olfacto! You can now login.")
+        toast.success("Registration Successful. You can now login.")
         navigate('/login')
       }
     } catch (error) {
