@@ -47,8 +47,8 @@ const Register = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
-      <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="w-screen h-screen flex justify-center items-center bg-neutral-50 dark:bg-neutral-950">
+      <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black border border-neutral-900">
         <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
           Welcome to Olfacto
         </h2>

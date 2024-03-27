@@ -1,6 +1,6 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom"
-import Navbar from './components/Navbar'
+import Navbar from './components/ui/Navbar/Navbar'
 import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
@@ -8,15 +8,22 @@ import axios from 'axios'
 import { Toaster } from 'react-hot-toast'
 import { UserContextProvider } from '../context/UserContext'
 import Dashboard from './pages/Dashboard'
+import { useState } from 'react'
 
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
 function App() {
+  const [dark, setDark] = useState<boolean>(false);
+
+  const toggleDarkMode = () => {
+    setDark(!dark)
+  }
+
   return (
-    <div className='app'>
+    <div className={dark ? "app dark" : "app"}>
     <UserContextProvider>
-      <Navbar />
+      <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={dark}/>
       <Toaster position='bottom-right' toastOptions={{duration: 6000}}/>
       <Routes>
         <Route path='/' element={<Home />} />
