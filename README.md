@@ -13,6 +13,7 @@ Olfacto is a full-stack web app that recommends you the best fragrances based on
 - `Tailwind`
 - `Express`
 - `MongoDB`
+- `AWS S3`
 
 ## 📝 How It Works
 
