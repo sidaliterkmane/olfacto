@@ -7,15 +7,16 @@ const data = require("../data/fragrances.json");
 
 require('dotenv').config({ path: 'server/.env'});
 
-console.log("MongoDB URI: ", process.env.MONGO_URL);
-
 // database connection
 mongoose.connect(process.env.MONGO_URL)
 .then(() => console.log("DB Connected."))
 .catch((err) => console.log("DB Failed To Connect", err))
 
-async function importData() {
+// Function parsing json file and adding objects into DB to match the schema.
+// In this case the schema is fragrance.js
+const importData = async () => {
     for (const fragrance of data) {
+        // Checks if item exists in DB
         try {
             const exists = await Fragrance.findOne({ name: fragrance.name }).exec();
 
