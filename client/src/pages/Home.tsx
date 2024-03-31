@@ -15,7 +15,7 @@ const Home = () => {
           duration: 0.8,
           ease: "easeInOut",
         }}
-        className="relative flex flex-col gap-4 items-center justify-center px-4"
+        className="max-w-[1250px] relative flex flex-col gap-4 items-center justify-center px-4"
       >
         <div className="text-3xl md:text-7xl font-bold dark:text-white text-center">
           Never wear a fragrance you don't like, ever again.

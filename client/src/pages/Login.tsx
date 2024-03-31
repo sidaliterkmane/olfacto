@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import axios from "axios";
 import {toast} from 'react-hot-toast'
 import { Link, useNavigate } from "react-router-dom";
@@ -12,6 +12,7 @@ import {
   IconBrandGoogle,
   IconBrandOnlyfans,
 } from "@tabler/icons-react";
+import { UserContext } from "../../context/UserContext";
 
 
 const Login = () => {
@@ -22,29 +23,29 @@ const Login = () => {
     password: '',
   })
 
+  const { setUser }: any = useContext(UserContext)
+
   const loginUser = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     const {email, password} = data;
 
     try {
-      const {data} = await axios.post("/login", {
-        email,
-        password
-      })
+      const response = await axios.post("/login", { email, password });
+      const loginData = response.data;
 
-      if (data.error) {
-        toast.error(data.error)
+      if (loginData.error) {
+          toast.error(loginData.error);
       } else {
-        setData({
-          email: '',
-          password: ''
-        });
-        toast.success("Login successful. Welcome to Olfacto!")
-        navigate("/dashboard")
+          // Fetch user profile here and update context
+          const profileResponse = await axios.get("/profile");
+          setUser(profileResponse.data);
+          toast.success("Login successful. Welcome to Olfacto!");
+          navigate("/dashboard");
       }
-    } catch (error) {
-      
-    }
+  } catch (error) {
+      console.error("Login error:", error);
+      // Handle login error
+  }
   }
 
   return (

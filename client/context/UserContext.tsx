@@ -12,12 +12,16 @@ export function UserContextProvider({children}: userContextProviderProps) {
     const [user, setUser] = useState(null)
 
     useEffect(() => {
-        if (!user) {
-            axios.get("/profile").then(({data}) => {
-                setUser(data)
+        axios.get("/profile")
+            .then(({ data }) => {
+                if (data) setUser(data);
+                else setUser(null); // Set user to null if no user data
             })
-        }
-    }, [user])
+            .catch(error => {
+                console.error("Failed to fetch profile:", error);
+                setUser(null);
+            });
+    }, []);
 
     return (
         <UserContext.Provider value={{user, setUser}}>

@@ -19,7 +19,7 @@ const Library = () => {
   }, [])
 
   return (
-    <div className='w-full flex gap-[1rem] flex-wrap'>
+    <div className='w-full flex flex-wrap justify-between box-border p-[1.5rem] bg-neutral-100 rounded-2xl'>
       {fragrances.map(fragrance => (
         <FragranceCard
           fragranceImage={fragrance.image}

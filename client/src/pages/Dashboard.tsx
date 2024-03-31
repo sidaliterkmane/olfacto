@@ -1,27 +1,39 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
-
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 import Library from "../components/FragranceLibrary/Library";
+import DashNav from "../components/ui/DashNav";
 
 const Dashboard = () => {
-  const { user }: any = useContext(UserContext)
+  const { user, setUser }: any = useContext(UserContext)
+  const navigate = useNavigate(); // For redirecting after logout
+  
+
+  const handleLogout = async () => {
+    try {
+      await axios.get("/logout");
+      setUser(null)
+      toast.success("You have successfully logged out.")
+      navigate("/login")
+    } catch (error) {
+      console.error("Logout failed:", error)
+    }
+  }
+
+  if (!user) {
+    navigate("/login");
+    return null
+  }
 
   return (
-    <div className="w-full h-full bg-neutral-50 dark:bg-neutral-900 flex justify-center">
-      <div className="dashboard-container w-full mt-[60px] pt-[50px] p-5 flex justify-between gap-3">
-        <div className="menu w-[450px] h-full">
-          {!!user && (<h1 className="text-5xl font-extralight dark:text-neutral-50">Hi {user.name} ✌️</h1>)}
-          <p className="font-extralight text-neutral-500 mt-2">Welcome to your olfacto dashboard.</p>
+    <div className="w-full h-full bg-neutral-200 dark:bg-neutral-900 flex justify-center">
+      <div className="dashboard-container w-[1250px] mt-[20px] pt-[50px] p-5 flex flex-col gap-[2rem]">
+        <DashNav userName={user.email} handleLogout={handleLogout}/>
 
-          <div className="submenu mt-20">
-            <h3 className="font-semibold dark:text-neutral-50">M E N U</h3>
-          </div>
-        </div>
+        <Library />
 
-        <div className="content w-full h-full bg-neutral-200 rounded-3xl dark:bg-neutral-800 p-[2rem]">
-          <Library />
-        </div>
-        
       </div>
 
     </div>
