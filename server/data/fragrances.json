@@ -79,5 +79,212 @@
         "family": "Fresh & Woody",
         "description": "Sauvage Elixir is an extraordinarily* concentrated fragrance steeped in the emblematic freshness of Sauvage with an intoxicating heart of spices, a tailor-made lavender essence and a blend of rich woods forming the signature of its powerful, lavish and captivating trail. The Sauvage Elixir fragrance was created like a fine liqueur made of exceptional ingredients. This concentration was made possible by the exceptional quality of the raw materials: Sauvage Elixir is a fragrance as unique and rare as a red moon in the night sky.",
         "image": "https://olfacto.s3.amazonaws.com/fragrances/dior/sauvage+elexir.webp"
+    },
+    {
+        "name": "Spicebomb",
+        "brand": "Viktor & Rolf",
+        "type": "Eau de Toilette",
+        "for": "men",
+        "notes": [
+            "Pink Pepper", 
+            "Elemi",
+            "Bergamot",
+            "Grapefruit",
+            "Cinnamon",
+            "Saffron",
+            "Paprika",
+            "Tobacco",
+            "Leather",
+            "Vetiver"
+        ],
+        "family": "Warm & Spicy",
+        "description": "Make your mark with this Spicebomb eau de toilette spray for men, released in 2012 by Viktor & Rolf. This tempting everyday scent encompasses a bevy of notes that surround your body in an explosion of masculinity, beginning with the opening combination of bergamot and pink pepper fora spicy start. The scent cascades into a heart of red pepper and cinnamon for a touch of excitement before descending to a base of leather for a masculine finish and staying power.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/viktor%26rolf/spicebomb.webp"
+    },
+    {
+        "name": "Spicebomb",
+        "brand": "Viktor & Rolf",
+        "type": "Eau de Toilette",
+        "for": "men",
+        "notes": [
+            "Pink Pepper", 
+            "Elemi",
+            "Bergamot",
+            "Grapefruit",
+            "Cinnamon",
+            "Saffron",
+            "Paprika",
+            "Tobacco",
+            "Leather",
+            "Vetiver"
+        ],
+        "family": "Warm & Spicy",
+        "description": "Make your mark with this Spicebomb eau de toilette spray for men, released in 2012 by Viktor & Rolf. This tempting everyday scent encompasses a bevy of notes that surround your body in an explosion of masculinity, beginning with the opening combination of bergamot and pink pepper fora spicy start. The scent cascades into a heart of red pepper and cinnamon for a touch of excitement before descending to a base of leather for a masculine finish and staying power.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/viktor%26rolf/spicebomb.webp"
+    },
+    {
+        "name": "Spicebomb Extreme",
+        "brand": "Viktor & Rolf",
+        "type": "Eau de Parfum",
+        "for": "men",
+        "notes": [
+            "Vanilla", 
+            "Tobacco",
+            "Cinnamon",
+            "Cumin",
+            "Bourbon Whiskey",
+            "Saffron"
+        ],
+        "family": "Warm & Spicy",
+        "description": "Spicebomb Extreme is a stimulating and exciting fragrance for men. This oriental spicy scent features intense and explosive notes from Black Pepper, Vanilla, Caraway, Lavender and Tobacco to give you an unforgettable fragrance.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/viktor%26rolf/spicebomb+extreme.webp"
+    },
+    {
+        "name": "Spicebomb Infrared",
+        "brand": "Viktor & Rolf",
+        "type": "Eau de Parfum",
+        "for": "men",
+        "notes": [
+            "Red Fruits", 
+            "Pink Pepper",
+            "Saffron",
+            "Cinnamon",
+            "Red Pepper",
+            "Tobacco",
+            "Bezoin"
+        ],
+        "family": "Warm & Spicy",
+        "description": "Spicebomb Infrared is a spicy and captivating scent for men. Introduced in 2021, this scent comes from the design house of Viktor&Rolf. At the start are fresh notes from saffron, pink pepper and red fruits. The center is filled with notes from red pepper and cinnamon, while the base features irresistible hints from benzoin and tobacco.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/viktor%26rolf/spicebomb+infrared.webp"
+    },
+    {
+        "name": "Spicebomb Night Vision",
+        "brand": "Viktor & Rolf",
+        "type": "Eau de Toilette",
+        "for": "men",
+        "notes": [
+            "Granny Smith Apple", 
+            "Green Mandarin",
+            "Cardamom",
+            "Grapefruit",
+            "Pepper",
+            "Sage",
+            "Red Chilli Pepper",
+            "Nutmeg",
+            "Clove",
+            "Geranium",
+            "Tonka Bean",
+            "Woody Notes",
+            "Almond"
+        ],
+        "family": "Warm & Spicy",
+        "description": "Spicebomb Night Vision is an oriental floral scent for men. Launched in 2020, this fragrance comes from the design house of Viktor & Rolf. At the top are fresh hints from Cardamom, Green Apple, Black Pepper, Nutmeg, Chilli Pepper, Clove, Lemon and Grapefruit. The heart opens to a hints from Lavender, Rosemary, Clary Sage, Coriander, Mastic and Lavender. The base is an interesting blend of notes from Balsam Fir, Nutty notes, Pistachio, Cedar, Patchouli, Olibanum, Peru Balsam and Labdanum.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/viktor%26rolf/spicebomb+night+vision.webp"
+    },
+    {
+        "name": "MYSLF",
+        "brand": "Yves Saint Laurent",
+        "type": "Eau de Parfum",
+        "for": "men",
+        "notes": [
+            "Calabrian Bergamot", 
+            "Bergamot",
+            "Tunision Orange Blossom",
+            "Ambrofix™",
+            "Patchouli"
+        ],
+        "family": "Earthy & Woody",
+        "description": "MYSLF is a refillable fragrance with a long-lasting trail that blends sparkling bergamot and rich orange-blossom absolute with warm woods, including patchouli and musky Ambrofix™. A twist on the traditional woody fragrance family with flowers. A statement of modern masculinity to celebrate your true self. Unapologetically. Proudly.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/MYSLF+edp.webp"
+    },
+    {
+        "name": "Y",
+        "brand": "Yves Saint Laurent",
+        "type": "Eau de Toilette",
+        "for": "men",
+        "notes": [
+            "Aldehydes", 
+            "Bergamot",
+            "Ginger",
+            "Mint",
+            "Lemon",
+            "Apple",
+            "Violet Leaf",
+            "Pineapple",
+            "Sage",
+            "Geranium",
+            "Ambergris",
+            "Musk",
+            "Cedar",
+            "Balsam Fir",
+            "Vetiver",
+            "Incense"
+        ],
+        "family": "Earthy & Woody",
+        "description": "Y Eau de Toilette is a fresh and clean men's cologne featuring aromatic and fresh scents of sage and lavender at the heart with a crisp bite of geranium. These notes are rounded out by sensual woods and masculine incense to create a long-lasting, highly fresh cologne for the Y man. Y Eau de Toilette is a men's fragrance for the fearless experimenter who lives by his own rules. It is a mineral, woody scent with powerful freshness for lasting intensity.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/y+edt.webp"
+    },
+    {
+        "name": "Y Eau de Parfum",
+        "brand": "Yves Saint Laurent",
+        "type": "Eau de Parfum",
+        "for": "men",
+        "notes": [
+            "Apple", 
+            "Ginger",
+            "Bergamot Orange Blossom",
+            "Sage",
+            "Juniper Berries",
+            "Geranium",
+            "Amberwood",
+            "Tonka Bean",
+            "Cedar",
+            "Vetiver",
+            "Olibanum"
+        ],
+        "family": "Earthy & Woody",
+        "description": "The signature Y scent is a bold and woody men's fragrance. This seductive cologne is infused with sophisticated and revitalizing notes of sage and geranium and rounded out with a hint of sensual wood. A long-lasting fragrance for the accomplished, self-made man. It is an intense portrayal of masculinity in a sophisticated cologne.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/y+edp.webp"
+    },
+    {
+        "name": "Y Parfum",
+        "brand": "Yves Saint Laurent",
+        "type": "Parfum",
+        "for": "men",
+        "notes": [
+            "Apple", 
+            "Aldehydes",
+            "Grapefruit",
+            "Ginger",
+            "Sage",
+            "Lavender",
+            "Geranium",
+            "Tonka Bean",
+            "Cedar",
+            "Olibanum",
+            "Patchouli"
+        ],
+        "family": "Earthy & Woody",
+        "description": "An intense and dark interpretation of the Y signature scent, this men’s fragrance combines the bold, woody note of cedarwood with fresh lavender and sharp geranium - adding an edgy, raw twist to the iconic Y scent. A sensual and intoxicating YSL cologne that emphasizes bold masculinity, and exudes luxury, intensity, and sophistication to help every man find their inner rockstar.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/y+parfum.webp"
+    },
+    {
+        "name": "Y Eau de Parfum Intense",
+        "brand": "Yves Saint Laurent",
+        "type": "Eau de Parfum",
+        "for": "men",
+        "notes": [
+            "Ginger", 
+            "Juniper Berries",
+            "Bergamot",
+            "Sage",
+            "Geranium",
+            "Patchouli",
+            "Vetiver",
+            "Cedar"
+        ],
+        "family": "Earthy & Woody",
+        "description": "This men’s cologne amplifies the Y signature scent to the extreme by spicing it up with blue juniper berries. Vibrant lavender is contrasted by the woody notes of patchouli for a clean scent that is fresh but intensely powerful. It’s a deep blue sexy cologne with all-day long intensity in a single spray. Y Eau de Parfum Intense explores the contrast between an intense, woody blend and a very fresh, spicy top.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/y+parfum+intense.webp"
     }
 ]

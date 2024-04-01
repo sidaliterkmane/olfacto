@@ -15,7 +15,7 @@ const DashNav: React.FC<DashNavProps> = ({ userName, handleLogout }) => {
     }
 
     return (
-        <div className='w-full h-[70px] bg-neutral-100 dark:bg-neutral-800 rounded-2xl p-[20px] flex justify-between items-center shadow-lg relative'>
+        <div className='w-full h-[70px] bg-neutral-50 dark:bg-neutral-800 rounded-2xl p-[20px] flex justify-between items-center shadow-lg relative'>
             <div className='relative'>
                 <span className='absolute z-30 top-[-7px] right-[-5px]'>✨</span>
                 <button className="group group-hover:before:duration-500 group-hover:after:duration-500 after:duration-500 hover:before:[box-shadow:_20px_20px_20px_30px_#a21caf] duration-500 before:duration-500 hover:duration-500 hover:after:-right-8 hover:before:right-12 hover:before:-bottom-8 hover:before:blur origin-left hover:decoration-2 relative bg-neutral-300 h-16 w-64 text-left p-3 text-gray-50 text-base font-bold rounded-lg  overflow-hidden  before:absolute before:w-12 before:h-12 before:content[''] before:right-1 before:top-1 before:z-10 before:bg-violet-500 before:rounded-full before:blur-lg  after:absolute after:z-10 after:w-20 after:h-20 after:content['']  after:bg-rose-300 after:right-8 after:top-3 after:rounded-full after:blur-lg w-[130px] h-[40px] flex justify-center items-center hover:brightness-110 dark:bg-neutral-300 shadow-md">

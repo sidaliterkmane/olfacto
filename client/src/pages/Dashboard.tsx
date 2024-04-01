@@ -31,9 +31,7 @@ const Dashboard = () => {
     <div className="w-full h-full bg-neutral-200 dark:bg-neutral-900 flex justify-center">
       <div className="dashboard-container w-[1250px] mt-[20px] pt-[50px] p-5 flex flex-col gap-[2rem]">
         <DashNav userName={user.email} handleLogout={handleLogout}/>
-
         <Library />
-
       </div>
 
     </div>

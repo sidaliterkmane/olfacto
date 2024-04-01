@@ -23,8 +23,6 @@ const importData = async () => {
             if (!exists) {
                 await Fragrance.create(fragrance);
                 console.log("Added new fragrance: " + fragrance.name);
-            } else {
-                console.log("Fragrance already exists: " + fragrance.name)
             }
         } catch (error) {
             console.log("Error importing fragrance " + fragrance.name + " " + error)

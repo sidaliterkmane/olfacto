@@ -18,6 +18,7 @@ app.use(express.urlencoded({extended: false}))
 
 app.use('/', require("./routes/authRoutes"))
 app.use('/api', require("./routes/fragranceRoutes"))
+app.use('/user', require("./routes/userRoutes"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

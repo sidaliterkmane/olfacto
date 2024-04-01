@@ -7,7 +7,11 @@ const userSchema = new Schema({
         type: String,
         unique: true
     },
-    password: String
+    password: String,
+    favorites: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Fragrance'
+    }]
 })
 
 const UserModel = mongoose.model("User", userSchema)

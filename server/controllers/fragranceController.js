@@ -9,6 +9,18 @@ const getAllFragrances = async (req, res) => {
     }
 }
 
+const getFragrancesSample = async (req, res) => {
+    try {
+        const fragrancesSample = await Fragrance.aggregate([
+            {$sample: {size: 5}}
+        ])
+        res.json(fragrancesSample)
+    } catch (error) {
+        res.status(500).json({message: error.message})
+    }
+}
+
 module.exports = {
-    getAllFragrances
+    getAllFragrances,
+    getFragrancesSample
 }
