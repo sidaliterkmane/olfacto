@@ -10,3 +10,37 @@
     margin: 0;
     font-family: "DM Sans", sans-serif;
 }
+
+/* Styles for the scrollbar track (background) */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* Makes the track background transparent */
+}
+
+/* Styles for the scrollbar handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* or any color you prefer */
+    border-radius: 10px;
+}
+
+/* Handle hover styles */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* Styles for the scrollbar itself (width, etc.) */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+    /* Sets the thumb color and transparent track */
+}
+
+footer {
+    border-top: 1px solid rgba(128, 128, 128, 0.208);
+}

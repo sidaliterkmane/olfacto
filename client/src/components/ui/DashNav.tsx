@@ -5,9 +5,11 @@ import { IoIosArrowDown } from "react-icons/io";
 interface DashNavProps {
     userName: string;
     handleLogout: () => void;
+    toggleFullLibrary: () => void;
+    toggleDashboard: () => void;
 }
 
-const DashNav: React.FC<DashNavProps> = ({ userName, handleLogout }) => {
+const DashNav: React.FC<DashNavProps> = ({ userName, handleLogout, toggleFullLibrary, toggleDashboard }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleDropDown = () => {
@@ -28,14 +30,15 @@ const DashNav: React.FC<DashNavProps> = ({ userName, handleLogout }) => {
             </button>
 
             <div
-                className={`shadow-md origin-top-right absolute right-0 mt-[245px] mr-[20px] w-56 rounded-md bg-white border border-neutral-300 dark:border-neutral-500 dark:bg-neutral-600 ring-1 ring-black ring-opacity-5 focus:outline-none transition ease duration-300 ${
+                className={`z-10 shadow-md origin-top-right absolute right-0 mt-[285px] mr-[20px] w-56 rounded-md bg-white border border-neutral-300 dark:border-neutral-500 dark:bg-neutral-600 ring-1 ring-black ring-opacity-5 focus:outline-none transition ease duration-300 ${
                     isOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'} `}
             >
                 
                 <div className="py-1 flex flex-col gap-1">
                     <p className='px-4 py-2 text-sm font-light dark:text-white'>Signed in as {userName}</p>
                     <div className='w-full border-b dark:border-neutral-500'></div>
-                    <button className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Fragrance Library</button>
+                    <button onClick={toggleDashboard} className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Dashboard</button>
+                    <button onClick={toggleFullLibrary} className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Fragrance Library</button>
                     <button  className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Favorites</button>
                     <div className='w-full border-b dark:border-neutral-500'></div>
                     <button onClick={handleLogout} className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Log out</button>

@@ -26,7 +26,7 @@ const FragranceCard: React.FC<FragranceCardProps> = ({ fragranceName, fragranceB
       <div className='fragrance-info flex flex-col mt-1'>
 
         <p className='font-semibold dark:text-white'>{fragranceName}</p>
-        <p className='font-semibold dark:text-white text-xs font-light'><span className='font-light text-xs text-blue-700'>By</span> {fragranceBrand}</p>
+        <p className='font-light dark:text-white text-xs '><span className='font-light text-xs text-blue-700'>By</span> {fragranceBrand}</p>
         <div className='w-full flex items-center justify-between mt-[1.5rem]'>
           <p className='box-border p-[5px] rounded-lg w-fit text-xs border-neutral-300 border dark:border-neutral-500 text-neutral-600 dark:text-neutral-400 bg-neutral-200 dark:bg-neutral-600 shadow'>{fragranceType}</p>
 
