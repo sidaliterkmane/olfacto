@@ -24,7 +24,24 @@ const getFragrancesSample = async (req, res) => {
     }
 }
 
+// Controller for getting a single fragrance by ID
+const getIndividualFragrance = async (req, res) => {
+    try {
+        const fragranceId = req.params.fragranceId;
+        const fragrance = await Fragrance.findById(fragranceId); 
+
+        if (!fragrance) {
+            return res.status(404).json({ message: "Fragrance not found" });
+        }
+
+        res.json(fragrance);
+    } catch (error) {
+        res.status(500).json({ message: "Error retrieving fragrance", error: error.message})
+    }
+}
+
 module.exports = {
     getAllFragrances,
-    getFragrancesSample
+    getFragrancesSample,
+    getIndividualFragrance
 }

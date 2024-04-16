@@ -7,11 +7,12 @@ interface FullLibraryProps {
     fragrances: any[];
     toggleFragranceFavorite: (fragranceId: string, isFavorite: boolean) => void;
     isFragranceFavorite: (fragranceId: string) => boolean;
+    showFragrancePage: (fragranceId: string) => void;
 }
 
 
 
-const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFavorite, isFragranceFavorite }) => {
+const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFavorite, isFragranceFavorite, showFragrancePage }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const filteredFragrances = fragrances.filter(fragrance => {
@@ -21,7 +22,7 @@ const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFa
     });
 
     return (
-        <div className='flex flex-col gap-[2rem] box-border h-full w-[103%]'>
+        <div className='flex flex-col gap-[2rem] box-border h-[90%] w-[103%]'>
             <div className='w-full flex items-center justify-between'>
                 <h1 className='text-2xl font-semibold dark:text-white'>Fragrance Library</h1>
 
@@ -42,7 +43,7 @@ const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFa
             </div>
             <div className='custom-scrollbar flex flex-col gap-[2rem] box-border overflow-hidden overflow-y-scroll p-2'>
 
-                <div className='w-full flex flex-wrap gap-5'>
+                <div className='w-full flex flex-wrap gap-5 '>
                     {filteredFragrances.map(fragrance => (
                         <FragranceCard
                             key={fragrance._id}
@@ -53,6 +54,7 @@ const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFa
                             fragranceType={fragrance.type}
                             isFavorite={isFragranceFavorite(fragrance._id)}
                             onToggleFavorite={toggleFragranceFavorite}
+                            onCardClick={() => showFragrancePage(fragrance._id)}
                         />
                     ))}
                 </div>

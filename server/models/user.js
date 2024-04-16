@@ -11,7 +11,10 @@ const userSchema = new Schema({
     favorites: [{
         type: Schema.Types.ObjectId,
         ref: 'Fragrance'
-    }]
+    }],
+    preferences: {
+        darkTheme: Boolean
+    }
 })
 
 const UserModel = mongoose.model("User", userSchema)

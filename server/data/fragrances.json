@@ -271,7 +271,7 @@
     {
         "name": "Y Eau de Parfum Intense",
         "brand": "Yves Saint Laurent",
-        "type": "Eau de Parfum",
+        "type": "Eau de Parfum Intense",
         "for": "men",
         "notes": [
             "Ginger", 
@@ -286,5 +286,107 @@
         "family": "Earthy & Woody",
         "description": "This men’s cologne amplifies the Y signature scent to the extreme by spicing it up with blue juniper berries. Vibrant lavender is contrasted by the woody notes of patchouli for a clean scent that is fresh but intensely powerful. It’s a deep blue sexy cologne with all-day long intensity in a single spray. Y Eau de Parfum Intense explores the contrast between an intense, woody blend and a very fresh, spicy top.",
         "image": "https://olfacto.s3.amazonaws.com/fragrances/ysl/y+parfum+intense.webp"
+    },
+    {
+        "name": "1 Million",
+        "brand": "Paco Rabanne",
+        "type": "Eau de Toilette",
+        "for": "men",
+        "notes": [
+            "Blood Mandarin", 
+            "Grapefruit",
+            "Mint",
+            "Cinnamon",
+            "Spicy Notes",
+            "Rose",
+            "Amber",
+            "Leather",
+            "Woody Notes",
+            "Indian Patchouli"
+        ],
+        "family": "Earthy & Woody",
+        "description": "Fall in love with danger and grand gestures. Obey no one. Except your fantasies. The 1 million fragrance eau de toilette for men is a beautiful spicy leather scent for insolent gentlemen.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+edt.jpeg"
+    },
+    {
+        "name": "1 Million Parfum",
+        "brand": "Paco Rabanne",
+        "type": "Parfum",
+        "for": "men",
+        "notes": [
+            "Tuberose", 
+            "Salt",
+            "Solar Notes",
+            "Ambergris",
+            "Monoi Oil",
+            "Leather",
+            "Cashmeran",
+            "Labdanum",
+            "Pine"
+        ],
+        "family": "Warm & Spicy",
+        "description": "How do you become 1 Million among millions? The opulence of a solar leather with a touch of salt. The insolence of an ultra-flamboyant ingot. The Paco Rabanne 1 MILLION fragrance. Dare to be too much.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+parfum.jpeg"
+    },
+    {
+        "name": "1 Million Elexir",
+        "brand": "Paco Rabanne",
+        "type": "Elexir",
+        "for": "men",
+        "notes": [
+            "Apple", 
+            "Davana",
+            "Damask Rose",
+            "Cedar",
+            "Osmanthus",
+            "Vanilla Absolute",
+            "Tonka Bean",
+            "Patchouli"
+        ],
+        "family": "Earthy & Woody",
+        "description": "1 Million Elixir, richer than ever before, for thrilling sensations. The hand-picked ingredients, Turkish Damascena rose, osmanthus and wild grown tonka beans, undoubtedly make this masterpiece composition stand out by the extreme quality of its raw materials. Deeply sensual, liquorous davana vibrates with the power of smooth woods and black vanilla seeds. Supreme sensuality meets absolute long-lasting power.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+elexir.jpeg"
+    },
+    {
+        "name": "1 Million Royal",
+        "brand": "Paco Rabanne",
+        "type": "Parfum",
+        "for": "men",
+        "notes": [
+            "Cardamom", 
+            "Tangerine",
+            "Bergamot",
+            "Lavender",
+            "Sage",
+            "Violet Leaf",
+            "Bezoin",
+            "Cedar",
+            "Patchouli"
+        ],
+        "family": "Earthy & Woody",
+        "description": "Powered by your inner confidence, enter the 1 Million Royal kingdom with the ultimate fragrance of defiant self-expression, made for you by Paco Rabanne. Unconstrained by convention, find the freedom to live by your own rules with 1 Million Royal: a flamboyant fresh woody blend that collides with a distinctive sensuality to unleash what makes you uniquely you.",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+royal.jpeg"
+    },
+    {
+        "name": "1 Million Golden Oud",
+        "brand": "Paco Rabanne",
+        "type": "Parfum Intense",
+        "for": "men",
+        "notes": [
+            "Saffron", 
+            "Black Pepper",
+            "Nutmeg",
+            "Bergamot",
+            "Patchouli",
+            "Gurjan Balsam",
+            "Sandalwood",
+            "Leather",
+            "Oud",
+            "Cedarwood",
+            "Labdanum"
+        ],
+        "family": "Oud",
+        "description": "Million Golden Oud, a fragrance as precious as gold enriched with the most majestic ingredient of perfumery. A rich new harmony of warm sandalwood and spicy leather that reveals your majesty.​",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+golden+oud.jpeg"
     }
 ]

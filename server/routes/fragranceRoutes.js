@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const  cors = require("cors")
 
-const { getAllFragrances, getFragrancesSample } = require("../controllers/fragranceController")
+const { getAllFragrances, getFragrancesSample, getIndividualFragrance } = require("../controllers/fragranceController")
 
 // middleware
 router.use(
@@ -14,5 +14,6 @@ router.use(
 
 router.get('/fragrances', getAllFragrances);
 router.get('/fragrances/sample', getFragrancesSample)
+router.get('/fragrances/:fragranceId', getIndividualFragrance)
 
 module.exports = router;

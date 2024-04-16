@@ -6,18 +6,34 @@ import toast from "react-hot-toast";
 import Library from "../components/FragranceLibrary/Library";
 import FullLibrary from "../components/FragranceLibrary/FullLibrary";
 import DashNav from "../components/ui/DashNav";
+import useFragranceData from '../../hooks/useFragranceData';
+import { toggleFavorite, logoutUser } from '../../services/fragranceService';
+import FragrancePage from "./FragrancePage";
 
 const Dashboard = () => {
   // Accessing user context to retrieve and update user information
   const { user, setUser }: any = useContext(UserContext);
   const navigate = useNavigate();
+  
 
   // State to store list of fragrances, dashboard states and any errors
   const [fragrances, setFragrances] = useState([]);
   const [allFragrances, setAllFragrances] = useState([])
   const [error, setError] = useState<Error | null>(null);
   const [favorites, setFavorites] = useState([]);
-  const [fragranceLibrary, setFragranceLibrary] = useState(false);
+  const [currentFragrancePage, setCurrentFragrancePage] = useState('');
+
+  // Updates the current view
+  const [view, setView] = useState<"default" | "fullLibrary" | "fragrance">("default")
+
+  const switchView = (newView: 'default' | 'fullLibrary' | 'fragrance') => {
+    setView(newView);
+  };
+
+  const showFragrancePage = (fragranceId: string) => {
+    setView("fragrance");
+    setCurrentFragrancePage(fragranceId)
+  }
 
   // useEffect hook to fetch fragrance data and user's favorites on component mount
   useEffect(() => {
@@ -88,29 +104,23 @@ const Dashboard = () => {
     }
   };
 
-  const toggleFullLibrary = () => {
-    setFragranceLibrary(true);
-  }
-
-  const toggleDashboard = () => {
-    setFragranceLibrary(false);
-  }
-
   const DefaultDashboard = () => {
     return (
       <div>
-        <Library fragrances={fragrances} toggleFragranceFavorite={toggleFragranceFavorite} isFragranceFavorite={isFragranceFavorite} toggleFullLibrary={toggleFullLibrary} />
+        <Library fragrances={fragrances} toggleFragranceFavorite={toggleFragranceFavorite} isFragranceFavorite={isFragranceFavorite} toggleFullLibrary={() => switchView('fullLibrary')} showFragrancePage={showFragrancePage}/>
       </div>
     )
   }
 
   return (
-    <div className="w-full h-full pb-[130px] bg-neutral-200 dark:bg-neutral-900 flex justify-center">
-      <div className="dashboard-container w-[1250px] mt-[20px] pt-[50px] p-5 flex flex-col gap-[2rem]">
-        <DashNav userName={user.email} handleLogout={handleLogout} toggleFullLibrary={toggleFullLibrary} toggleDashboard={toggleDashboard}/>
-        {
-          fragranceLibrary ? <FullLibrary toggleFragranceFavorite={toggleFragranceFavorite} fragrances={allFragrances} isFragranceFavorite={isFragranceFavorite} /> : <DefaultDashboard />
-        }
+    <div className="w-full h-full bg-neutral-200 dark:bg-neutral-950 flex justify-center">
+      <div className="dashboard-container w-[1250px] mt-[20px] pt-[50px] mb-[50px] p-5 flex flex-col gap-[2rem]">
+        <DashNav userName={user.email} handleLogout={handleLogout} toggleFullLibrary={() => switchView('fullLibrary')} toggleDashboard={() => switchView('default')}/>
+
+        {/* Conditional rendering based on 'view' state */}
+        {view === 'default' && <DefaultDashboard />}
+        {view === 'fullLibrary' && <FullLibrary toggleFragranceFavorite={toggleFragranceFavorite} fragrances={allFragrances} isFragranceFavorite={isFragranceFavorite} showFragrancePage={showFragrancePage}/>}
+        {view === 'fragrance' && <FragrancePage fragranceId={currentFragrancePage} library={<Library fragrances={fragrances} toggleFragranceFavorite={toggleFragranceFavorite} isFragranceFavorite={isFragranceFavorite} toggleFullLibrary={() => switchView('fullLibrary')} showFragrancePage={showFragrancePage}/>} onToggleFavorite={toggleFragranceFavorite} isFavorite={isFragranceFavorite}/>}
       </div>
     </div>
   );

@@ -10,10 +10,11 @@ interface LibraryProps {
   toggleFragranceFavorite: (fragranceId: string, isFavorite: boolean) => void;
   isFragranceFavorite: (fragranceId: string) => boolean;
   toggleFullLibrary: () => void;
+  showFragrancePage: (fragranceId: string) => void;
 }
 
 // The Library component displays a small sample of fragrance cards
-const Library: React.FC<LibraryProps> = ({fragrances, toggleFragranceFavorite, isFragranceFavorite, toggleFullLibrary}) => {
+const Library: React.FC<LibraryProps> = ({fragrances, toggleFragranceFavorite, isFragranceFavorite, toggleFullLibrary, showFragrancePage}) => {
 
   return (
     <div className='flex flex-col gap-[2rem] box-border'>
@@ -31,7 +32,8 @@ const Library: React.FC<LibraryProps> = ({fragrances, toggleFragranceFavorite, i
             fragranceBrand={fragrance.brand}
             fragranceType={fragrance.type}
             isFavorite={isFragranceFavorite(fragrance._id)}
-            onToggleFavorite={toggleFragranceFavorite}
+            onToggleFavorite={() => toggleFragranceFavorite(fragrance._id, isFragranceFavorite(fragrance._id))}
+            onCardClick={() => showFragrancePage(fragrance._id)}
           />
         ))}
       </div>

@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const Fragrance = require("../models/fragrance");
 const data = require("../data/fragrances.json");
 
-require('dotenv').config({ path: 'server/.env'});
+const dotenv = require('dotenv').config();
 
 // database connection
 mongoose.connect(process.env.MONGO_URL)

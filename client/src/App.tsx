@@ -10,11 +10,10 @@ import { Toaster } from 'react-hot-toast'
 import { UserContextProvider } from '../context/UserContext'
 import Dashboard from './pages/Dashboard'
 import { useState } from 'react'
-
 axios.defaults.baseURL = "http://localhost:3000";
 axios.defaults.withCredentials = true;
 
-function App() {
+function App() {  
   const [dark, setDark] = useState<boolean>(false);
 
   const toggleDarkMode = () => {

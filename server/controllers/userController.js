@@ -10,7 +10,7 @@ const addToFavorites = async (req, res) => {
         // Find the user by email
         const user = await UserModel.findOne({ email: userEmail })
         if (!user) {
-            return res.status(404).json({ error: "User not found "});
+            return res.status(404).json({ error: "User not found " });
         }
 
         // Check if the fragrance exists
@@ -26,7 +26,7 @@ const addToFavorites = async (req, res) => {
             return res.json({ message: "Fragrance added to favorites" })
         }
 
-        res.status(400).json({ message: "Fragrance already in favorites."})
+        res.status(400).json({ message: "Fragrance already in favorites." })
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: "Internal server error" });
@@ -49,7 +49,7 @@ const removeFromFavorites = async (req, res) => {
         if (index > -1) {
             user.favorites.splice(index, 1);
             await user.save();
-            return res.json({ message: "Fragrance removed from favorites."})
+            return res.json({ message: "Fragrance removed from favorites." })
         }
 
         res.status(400).json({ message: "Fragrance not found in favorites" });
@@ -81,5 +81,5 @@ const getFavorites = async (req, res) => {
 module.exports = {
     addToFavorites,
     removeFromFavorites,
-    getFavorites
+    getFavorites,
 }
