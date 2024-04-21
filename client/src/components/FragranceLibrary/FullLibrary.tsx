@@ -40,7 +40,7 @@ const FullLibrary: React.FC<FullLibraryProps> = ({ fragrances, toggleFragranceFa
     return (
         <div className='flex flex-col gap-[2rem] box-border h-[90%] w-[103%]'>
             <div className='w-full flex items-center justify-between'>
-                <h1 className='text-2xl font-semibold dark:text-white'>Fragrance Library</h1>
+                <h1 className="text-3xl font-semibold dark:text-white">Fragrance Library</h1>
 
                 <div className='filters mr-[35px] flex gap-[1rem]'>
                     <div className='flex items-center gap-2'>

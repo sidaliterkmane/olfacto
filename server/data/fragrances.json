@@ -388,5 +388,27 @@
         "family": "Oud",
         "description": "Million Golden Oud, a fragrance as precious as gold enriched with the most majestic ingredient of perfumery. A rich new harmony of warm sandalwood and spicy leather that reveals your majesty.​",
         "image": "https://olfacto.s3.amazonaws.com/fragrances/paco+rabane/1+million+golden+oud.jpeg"
+    },
+    {
+        "name": "Colonia",
+        "brand": "Acqua Di Parma",
+        "type": "Eau de Cologne",
+        "for": "Unisex",
+        "notes": [
+            "Siscillian Citruses", 
+            "Lavender",
+            "Rosemary",
+            "Lemon Verbena",
+            "White Musk",
+            "Bulgarian Rose",
+            "Vetiver",
+            "Jasmine",
+            "Sandalwood",
+            "Patchouli",
+            "Amber"
+        ],
+        "family": "Citrus & Woody",
+        "description": "Created in 1916, Colonia is an attitude that expresses the essence of a lifestyle – dynamic, modern and effortlessly original. As soon as Acqua di Parma's instantly recognisable golden fruits blend of radiant lemon, Calabrian bergamot, and orange start to spill their luminous notes into the air, the perfume's sparkling character comes alive. It is amplified even more in the aromatic heart of the fragrance where lavender and hints of rose harmoniously intertwine with rosemary. Warm and precious woody notes of vetiver, sandalwood, and patchouli round off the base of this iconic Eau de Cologne.​",
+        "image": "https://olfacto.s3.amazonaws.com/fragrances/acquaDiParma/colonia.webp"
     }
 ]

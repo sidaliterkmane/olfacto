@@ -35,7 +35,7 @@ const FragrancePage: React.FC<FragrancePageProps> = ({ fragranceId, library, onT
 
     return (
         <div className="w-[103%] h-full bg-neutral-200 dark:bg-neutral-950 flex flex-col gap-[1rem] overflow-hidden overflow-y-scroll custom-scrollbar p-1">
-            <div className="w-full mt-[20px] pt-[50px] mb-[80px] pr-5 flex gap-[2rem] justify-between px-[1rem]">
+            <div className="w-full mt-[20px] pt-[50px] mb-[80px] pr-10 flex gap-[2rem] justify-between">
                 <div className='w-[60%]  flex flex-col gap-[1rem] justify-between'>
                     <div>
                         <h1 className='text-7xl font-bold dark:text-white'>{fragrance.name}</h1>
@@ -43,7 +43,11 @@ const FragrancePage: React.FC<FragrancePageProps> = ({ fragranceId, library, onT
                     </div>
 
                     <div>
+                        <div className='flex gap-2'>
+                        <p className='box-border p-[5px] rounded-lg w-fit text-xs border-neutral-300 border dark:border-neutral-700 text-neutral-600 dark:text-neutral-500 bg-neutral-200 dark:bg-neutral-800 shadow'>{fragrance.type}</p>
                         <p className='box-border p-[5px] rounded-lg w-fit text-xs border-neutral-300 border dark:border-neutral-700 text-neutral-600 dark:text-neutral-500 bg-neutral-200 dark:bg-neutral-800 shadow'>{fragrance.family}</p>
+                        </div>
+                        
 
                         <p className='mt-[2rem] text-neutral-500'>
                             {fragrance.description}
@@ -56,7 +60,7 @@ const FragrancePage: React.FC<FragrancePageProps> = ({ fragranceId, library, onT
                         <div className='flex gap-1 flex-wrap'>
                             {fragrance.notes.map((note: string) => {
                                 return (
-                                    <p className='box-border p-[5px] rounded-lg w-fit text-xs border-neutral-300 border dark:border-neutral-700 text-neutral-600 dark:text-neutral-500 bg-neutral-200 dark:bg-neutral-800 shadow'>{note}</p>
+                                    <p className='box-border p-[5px] rounded-lg w-fit text-xs text-white dark:text-black bg-neutral-900 dark:bg-neutral-100 shadow'>{note}</p>
                                 )
                             })}
                         </div>
@@ -104,7 +108,8 @@ const FragrancePage: React.FC<FragrancePageProps> = ({ fragranceId, library, onT
                 </div>
             </div>
 
-            <div className='pr-5 border-t border-neutral-300 dark:border-neutral-700 pt-8'>
+            <div className='pr-5 '>
+                <div className='w-[99%] border-t border-neutral-300 dark:border-neutral-700 pt-8'></div>
                 {library}
             </div>
 
