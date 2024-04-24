@@ -37,8 +37,8 @@ const DashNav: React.FC<DashNavProps> = ({ userName, handleLogout, toggleFullLib
                 
                 <div className="py-1 flex flex-col gap-1">
                     <p className='px-4 py-2 text-sm font-light dark:text-white'>Signed in as {userName}</p>
-                    <div className='w-full border-b dark:border-neutral-500'></div>
                     <button onClick={toggleProfile}  className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">My Profile</button>
+                    <div className='w-full border-b dark:border-neutral-500'></div>
                     <button onClick={toggleDashboard} className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Dashboard</button>
                     <button onClick={toggleFullLibrary} className="text-gray-700 dark:text-neutral-50 block px-4 py-2 text-sm hover:bg-neutral-100 dark:hover:bg-neutral-500 flex justify-start">Fragrance Library</button>
                     

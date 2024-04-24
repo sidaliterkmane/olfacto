@@ -10,6 +10,7 @@ import useFragranceData from '../../hooks/useFragranceData';
 import { toggleFavorite, logoutUser } from '../../services/fragranceService';
 import FragrancePage from "./FragrancePage";
 import UserProfile from "./UserProfile";
+import Favorites from "../components/Favorites";
 
 import acquaDiParma from '../assets/acqua-di-parma.png'
 
@@ -123,7 +124,7 @@ const Dashboard = () => {
 
   const DefaultDashboard = () => {
     return (
-      <div className="w-[103%] overflow-hidden overflow-y-scroll custom-scrollbar flex flex-col gap-[4rem]">
+      <div className="w-[103%] overflow-hidden overflow-y-scroll custom-scrollbar flex flex-col gap-[3rem]">
         <div className="w-full flex flex-col gap-[1.5rem] pr-6">
           <h1 className="text-3xl font-semibold dark:text-white">Dashboard</h1>
           <div className="greetings flex w-full h-[300px] border dark:border-white border-black border-opacity-5 dark:border-opacity-10 rounded-lg shadow">
@@ -157,8 +158,17 @@ const Dashboard = () => {
               </HeroHighlight>
             </div>
           </div>
+
+          <div className="favs pt-8">
+             <div>
+                  <Favorites 
+                    favoriteFragrances={favorites}
+                    showFragrancePage={showFragrancePage}
+                  />
+             </div>
+          </div>
         </div>
-        <div className="pr-5 pt-8">
+        <div className="pr-5">
           <div className='w-[99%] border-t border-neutral-300 dark:border-neutral-700 pt-8'></div>
           <Library fragrances={fragrances} toggleFragranceFavorite={toggleFragranceFavorite} isFragranceFavorite={isFragranceFavorite} toggleFullLibrary={() => switchView('fullLibrary')} showFragrancePage={showFragrancePage} />
         </div>
