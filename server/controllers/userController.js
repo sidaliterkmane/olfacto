@@ -1,6 +1,28 @@
 const Fragrance = require("../models/fragrance");
 const UserModel = require("../models/user");
 
+// Changes the user's username
+const changeUsername = async (req, res) => {
+    try {
+        const { newUsername, userEmail } = req.body;
+
+        // Find the user by email
+        const user = await UserModel.findOne({ email: userEmail })
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found"})
+        }
+
+        user.name = newUsername; 
+        await user.save();
+        return res.json({ message: "Username changed successfully. You now have to log back in." })
+
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+}
+
 // Adds a fragrance to a user's list of favorites
 const addToFavorites = async (req, res) => {
     // console.log("Request to add favorite:", req.body);
@@ -82,4 +104,5 @@ module.exports = {
     addToFavorites,
     removeFromFavorites,
     getFavorites,
+    changeUsername
 }

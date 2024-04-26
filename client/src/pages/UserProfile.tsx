@@ -1,15 +1,84 @@
+import { CgProfile } from "react-icons/cg";
+import axios from "axios";
+import toast from "react-hot-toast";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 interface UserProfileProps {
-    user: any;
+  user: any;
 }
 
 const UserProfile: React.FC<UserProfileProps> = ({ user }) => {
-    return (
-        <div className="w-[103%] overflow-hidden overflow-y-scroll custom-scrollbar flex flex-col gap-[4rem]">
-            <div className="w-full flex flex-col gap-[1.5rem] pr-6">
-                <h1 className="text-3xl font-semibold dark:text-white">My Profile</h1>
-            </div>
-        </div>
-    )
-}
+  const navigate = useNavigate();
+  
+  const [data, setData] = useState({
+    newUsername: "",
+  });
 
-export default UserProfile
+  const changeUsername = async (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    const { newUsername } = data;
+
+    const endpoint = "/user/changeUsername"
+    const response = await axios.post(endpoint, {newUsername, userEmail: user.email})
+    try {
+      await axios.get("/logout");
+      toast.success(response.data.message);
+      navigate("/login");
+    } catch (error) {
+      toast.error("Failed to change username.");
+      console.error("Error updating favorites: ", error);
+    }
+  }
+
+  return (
+    <div className="w-[103%] overflow-hidden overflow-y-scroll custom-scrollbar flex flex-col gap-[1.5rem]">
+      <div className="w-[97.5%] flex flex-col gap-2 pr-6 border-b border-neutral-300 dark:border-neutral-700 pb-5">
+        <h1 className="text-3xl font-semibold dark:text-white flex items-center gap-2">
+          <CgProfile /> Profile
+        </h1>
+        <p className="text-neutral-500">
+          Access and update your personal details here
+        </p>
+      </div>
+      <div className="w-[97.5%] flex flex-col gap-10 pr-6 border-b border-neutral-300 dark:border-neutral-700 pb-5">
+        <div className="w-[60%] flex justify-between">
+          <h2 className="text-md font-normal dark:text-white">Username</h2>
+          <form action="submit" className="flex gap-0 items-center" onSubmit={changeUsername}>
+            <input
+              type="text"
+              placeholder={user.name}
+              onChange={(e) => setData({ ...data, newUsername: e.target.value })}
+              className="h-[40px] bg-zinc-100 dark:bg-neutral-700 text-zinc-600 ring-1 ring-zinc-300 outline-none placeholder:text-zinc-600 placeholder:opacity-50 placeholder:font-light rounded-tl-md rounded-bl-md px-2 py-1 dark:ring-zinc-500 dark:placeholder:text-neutral-300 dark:text-neutral-200 dark:focus:bg-neutral-600"
+            />
+            <button className="h-[42px] py-1 px-2 rounded-tr-md rounded-br-md border border-neutral-300 dark:border-neutral-500 text-white text-sm bg-blue-800 hover:brightness-90 transition">
+              Save changes
+            </button>
+          </form>
+        </div>
+        <div className="w-[60%] flex justify-between">
+          <h2 className="text-md font-normal dark:text-white">Email</h2>
+          <input
+            disabled
+            type="text"
+            placeholder={user.email}
+            className="h-[40px] w-[290px] bg-zinc-100 dark:bg-neutral-700 text-zinc-600 ring-1 ring-zinc-300 outline-none placeholder:text-zinc-600 placeholder:opacity-50 placeholder:font-light rounded-md px-2 py-1 dark:ring-zinc-500 dark:placeholder:text-neutral-300 dark:text-neutral-200 dark:focus:bg-neutral-600 disabled:brightness-90 dark:disabled:brightness-50"
+          />
+        </div>
+      </div>
+      <div className="w-[97.5%] flex flex-col gap-2 pr-6 border-b border-neutral-300 dark:border-neutral-700 pb-5">
+        <div className="w-[60%] flex justify-between">
+          <h2 className="text-md font-normal dark:text-white">Password</h2>
+          <input
+            disabled
+            type="text"
+            placeholder="************"
+            className="h-[40px] w-[290px] bg-zinc-100 dark:bg-neutral-700 text-zinc-600 ring-1 ring-zinc-300 outline-none placeholder:text-zinc-600 placeholder:opacity-50 placeholder:font-light rounded-md px-2 py-1 dark:ring-zinc-500 dark:placeholder:text-neutral-300 dark:text-neutral-200 dark:focus:bg-neutral-600 disabled:brightness-90 dark:disabled:brightness-50"
+          />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default UserProfile;

@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className='absolute bottom-0 z-10 w-full h-[40px] flex justify-center bg-neutral-100 dark:bg-neutral-900'>
             <div className="w-[1250px] flex items-center px-5 justify-between">
-                <p className="font-light text-xs text-neutral-500">
+                <p className="font-light text-xs text-neutral-500 flex gap-1 items-center">
                     Copyright © {year} olfacto. All rights reserved. Made with <span className="inline-flex items-center"><IoHeart className=" text-red-400"/></span> by <a href="https://sidaliterkmane.com/" target="_blank" className="text-black dark:text-white">Sid Ali Terkmane</a>.
                 </p>
                 <a href="https://github.com/sidaliterkmane/olfacto/tree/main" target="_blank">

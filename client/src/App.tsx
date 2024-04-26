@@ -24,7 +24,7 @@ function App() {
     <div className={dark ? "app dark" : "app"}>
     <UserContextProvider>
       <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={dark}/>
-      <Toaster position='bottom-right' toastOptions={{duration: 6000}}/>
+      <Toaster position='bottom-right' toastOptions={{duration: 3000}}/>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/register' element={<Register />} />
