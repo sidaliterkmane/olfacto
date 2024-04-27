@@ -5,11 +5,15 @@ import { IoHeartDislike } from "react-icons/io5";
 interface FavoritesProps {
   favoriteFragrances: any[];
   showFragrancePage: (fragranceId: string) => void;
+  toggleFragranceFavorite: (fragranceId: string, isFavorite: boolean) => void;
+  isFragranceFavorite: (fragranceId: string) => boolean;
 }
 
 const Favorites: React.FC<FavoritesProps> = ({
   favoriteFragrances,
   showFragrancePage,
+  toggleFragranceFavorite,
+  isFragranceFavorite,
 }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8); // Adjust if needed
@@ -57,10 +61,17 @@ const Favorites: React.FC<FavoritesProps> = ({
           currentItems.map((fragrance) => (
             <MinimalFragranceCard
               key={fragrance._id}
+              fragranceId={fragrance._id}
               fragranceName={fragrance.name}
               fragranceBrand={fragrance.brand}
               fragranceImage={fragrance.image}
-              fragranceId={fragrance._id}
+              isFavorite={isFragranceFavorite(fragrance._id)}
+              onToggleFavorite={() =>
+                toggleFragranceFavorite(
+                  fragrance._id,
+                  isFragranceFavorite(fragrance._id)
+                )
+              }
               onCardClick={() => showFragrancePage(fragrance._id)}
             />
           ))

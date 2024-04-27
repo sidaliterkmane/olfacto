@@ -184,6 +184,8 @@ const Dashboard = () => {
           <div className="favs pt-8">
             <div>
               <Favorites
+                toggleFragranceFavorite={toggleFragranceFavorite}
+                isFragranceFavorite={isFragranceFavorite}
                 favoriteFragrances={favorites}
                 showFragrancePage={showFragrancePage}
               />
