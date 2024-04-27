@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const  cors = require("cors")
 
-const { addToFavorites, removeFromFavorites, getFavorites, changeUsername } = require("../controllers/userController")
+const { addToFavorites, removeFromFavorites, getFavorites, changeUsername, deleteAccount } = require("../controllers/userController")
 
 // middleware
 router.use(
@@ -15,6 +15,7 @@ router.use(
 router.post('/addFavorite', addToFavorites);
 router.post('/removeFavorite', removeFromFavorites);
 router.post('/changeUsername', changeUsername);
+router.post('/deleteAccount', deleteAccount)
 router.get('/getFavorites', getFavorites);
 
 module.exports = router;

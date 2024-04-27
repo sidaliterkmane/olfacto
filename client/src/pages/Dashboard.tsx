@@ -13,7 +13,7 @@ import UserProfile from "./UserProfile";
 import Favorites from "../components/Favorites";
 import Questionnaire from "./Questionnaire";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTransition, animated } from "react-spring";
 import { HeroHighlight, Highlight } from "../components/ui/hero-highlight";
 import { MdOutlineSpaceDashboard } from "react-icons/md";

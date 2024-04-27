@@ -98,7 +98,7 @@ const loginUser = async (req, res) => {
 
 // Logout endpoint
 const logoutUser = (req, res) => {
-    res.clearCookie("token").json({ message: "Logged out successfully. You will be redirected to the login page."})
+    res.clearCookie("token").json({ message: "Logged out successfully. You will be redirected to the login page." })
 }
 
 const getProfile = (req, res) => {

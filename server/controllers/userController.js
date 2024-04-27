@@ -1,6 +1,26 @@
 const Fragrance = require("../models/fragrance");
 const UserModel = require("../models/user");
 
+// Deletes the user's account
+const deleteAccount = async (req, res) => {
+    try {
+        const { userEmail } = req.body;
+
+        // Find the user by email
+        const user = await UserModel.findOne({ email: userEmail })
+
+        if (!user) {
+            return res.status(404).json({ error: "User not found" })
+        }
+
+        await user.deleteOne()
+        return res.json({ message: "Account successfully deleted." })
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: "Internal server error" });
+    }
+}
+
 // Changes the user's username
 const changeUsername = async (req, res) => {
     try {
@@ -104,5 +124,6 @@ module.exports = {
     addToFavorites,
     removeFromFavorites,
     getFavorites,
-    changeUsername
+    changeUsername,
+    deleteAccount
 }
